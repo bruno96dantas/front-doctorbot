@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
 
 </head>
 <body>
@@ -44,11 +44,24 @@
                 </div>
             </div>
             <div class="col-md-8" id="chat">
-                
+                <iframe frameborder="0" width="100%" height="100%" src="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=946999b0-4ea4-461a-b5f3-8e2d4cffe0d3&serviceInstanceID=fe2ef5e2-e35b-4c73-80e5-f299e6647b80"></iframe>
             </div>
           </div>
     </div>
     
+    <script>
+      window.watsonAssistantChatOptions = {
+          integrationID: "5504a44e-e4af-4254-8021-630935019f9d", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "fe2ef5e2-e35b-4c73-80e5-f299e6647b80", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+      });
+    </script>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
