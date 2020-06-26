@@ -1,70 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Doctor Bot</title>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Doctor Bot</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 
 </head>
-<body>
-    <nav class="navbar navbar-light">
-        <a class="navbar-brand" href="#">
-          <h2>Doctor Bot<i class="fas fa-robot"></i></h2>
-        </a>
-    </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4" id="painel">
-                <h3 class="text-center">Instruções</h3>
-                <div class="card bg-primary mb-3 text-center" id="card-1">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">Primeiro Passo</h5>
-                      <p class="card-text">Vamos a consulta! O DoctorBot irá te pedir para informar os sintomas que está sentindo.</p>
-                    </div>
-                  </div>
-                <div class="card bg-primary mb-3" id="card-2">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">Segundo Passo</h5>
-                      <p class="card-text">Agora, o Doctor Bot precisa te conhecer um pouco para concluir a sua consulta. Ele irá perguntar o seu gênero e a sua idade.</p>
-                    </div>
-                </div>
-                <div class="card bg-primary mb-3" id="card-3">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">Terceiro Passo</h5>
-                      <p class="card-text">Pronto! Após informar todos os sintomas e os dados pessoais, o Doctor Bot te mostrará os possíveis diagnósticos com a porcentagem de assertividade em relação aos sintomas analisados.</p>
-                      <p class="card-text">E caso você deseje, ele também irá recomendar um médico próximo, com localização e número do whatsapp.</p>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8" id="chat">
-                <iframe frameborder="0" width="100%" height="100%" src="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=946999b0-4ea4-461a-b5f3-8e2d4cffe0d3&serviceInstanceID=fe2ef5e2-e35b-4c73-80e5-f299e6647b80"></iframe>
-            </div>
-          </div>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+      <h2>Doctor Bot<i class="fas fa-robot"></i></h2>
+    </a>
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"> <i class="fab fa-rocketchat"></i> Assistente <span
+              class="sr-only">(página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.html"><i class="fas fa-chart-pie"></i> Dashboard</a>
+        </li>
+      </ul>
     </div>
-    
-    <script>
-      window.watsonAssistantChatOptions = {
-          integrationID: "5504a44e-e4af-4254-8021-630935019f9d", // The ID of this integration.
-          region: "us-south", // The region your integration is hosted in.
-          serviceInstanceID: "fe2ef5e2-e35b-4c73-80e5-f299e6647b80", // The ID of your service instance.
-          onLoad: function(instance) { instance.render(); }
-        };
-      setTimeout(function(){
-        const t=document.createElement('script');
-        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-        document.head.appendChild(t);
-      });
-    </script>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4" id="painel">
+        <h3 class="text-center">Instruções</h3>
+        <div class="card bg-primary mb-3 text-center" id="card-1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Primeiro Passo</h5>
+            <p class="card-text">Vamos a consulta! O DoctorBot irá te pedir para informar os sintomas que está sentindo.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-primary mb-3" id="card-2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Segundo Passo</h5>
+            <p class="card-text">Agora, o Doctor Bot precisa te conhecer um pouco para concluir a sua consulta. Ele irá
+              perguntar o seu gênero e a sua idade.</p>
+          </div>
+        </div>
+        <div class="card bg-primary mb-3" id="card-3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Terceiro Passo</h5>
+            <p class="card-text">Pronto! Após informar todos os sintomas e os dados pessoais, o Doctor Bot te mostrará
+              os possíveis diagnósticos com a porcentagem de assertividade em relação aos sintomas analisados.</p>
+            <p class="card-text">E caso você deseje, ele também irá recomendar um médico próximo, com localização e
+              número do whatsapp.</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" id="chat">
+        <iframe frameborder="0" width="100%" height="100%"
+          src="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=946999b0-4ea4-461a-b5f3-8e2d4cffe0d3&serviceInstanceID=fe2ef5e2-e35b-4c73-80e5-f299e6647b80"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "5504a44e-e4af-4254-8021-630935019f9d", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "fe2ef5e2-e35b-4c73-80e5-f299e6647b80", // The ID of your service instance.
+      onLoad: function (instance) { instance.render(); }
+    };
+    setTimeout(function () {
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

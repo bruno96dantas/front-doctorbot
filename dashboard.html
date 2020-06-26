@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Doctor Bot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <h2>Doctor Bot<i class="fas fa-robot"></i></h2>
+        </a>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html"><i class="fab fa-rocketchat"></i> Assistente </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="dashboard.html"><i class="fas fa-chart-pie"></i> Dashboard <span
+                            class="sr-only">(página atual)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="mx-auto col-md-8 col-sm-12 card-content" style="margin-top:1rem;">
+            <div class="card">
+                <div class="card-body row">
+                    <div class="col-md-12 col-sm-12 chart-border" style="margin-bottom: 2rem;">
+                        <canvas id="bar-chart-casesbyage" width="500" height="170"></canvas>
+                    </div>
+                    <div class="col-md-6 col-sm-12 chart-border">
+                        <canvas id="pie-chart-malediag" width="500" height="450"></canvas>
+                    </div>
+                    <div class="col-md-6 col-sm-12 chart-border">
+                        <canvas id="pie-chart-femalediag" width="500" height="450"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+
+</html>
